@@ -5,21 +5,24 @@
     <Triggers>
       <Trigger Enabled="true" Name="Follow me" Id="0c58322a-b2c9-46b0-8ec2-ddf7bfff3559" RegularExpression="Follow me">
         <Actions>
-          <Action OrderNumber="1" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}/" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: { &quot;command&quot;: &quot;/follow &lt;triangle&gt;&quot; } }" SoundRouting="None" TTSRouting="None" ActionType="GenericJson">
+          <Action OrderNumber="1" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}/" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: { &quot;command&quot;: &quot;/rotation Off&quot; } }" SoundRouting="None" TTSRouting="None" ActionType="GenericJson">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}/" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: { &quot;command&quot;: &quot;/pcraft run End&quot; } }" SoundRouting="None" TTSRouting="None" ActionType="GenericJson" ExecutionDelayExpression="400">
+          <Action OrderNumber="2" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}/" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: { &quot;command&quot;: &quot;/follow &lt;triangle&gt;&quot; } }" SoundRouting="None" TTSRouting="None" ActionType="GenericJson">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}/" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: { &quot;command&quot;: &quot;/pcraft run End&quot; } }" SoundRouting="None" TTSRouting="None" ActionType="GenericJson" ExecutionDelayExpression="300">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Name="Poke" Id="ce977336-fb13-4b4f-b129-3c2e5635159a" RegularExpression="Poke">
+      <Trigger Enabled="true" Name="focus target" Id="ce977336-fb13-4b4f-b129-3c2e5635159a" RegularExpression="focus target">
         <Actions>
           <Action OrderNumber="1" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}/" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: { &quot;command&quot;: &quot;/assist &lt;triangle&gt;&quot; } }" SoundRouting="None" TTSRouting="None" ActionType="GenericJson">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" JsonEndpointExpression="http://localhost:45678/" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: { &quot;command&quot;: &quot;/pcraft run NumPad0&quot; } }" SoundRouting="None" TTSRouting="None" ActionType="GenericJson" ExecutionDelayExpression="300">
+          <Action OrderNumber="2" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}/" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: { &quot;command&quot;: &quot;/rotation Manual&quot; } }" SoundRouting="None" TTSRouting="None" ActionType="GenericJson" ExecutionDelayExpression="300">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
@@ -56,6 +59,18 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Name="Poke" Id="969e3a3e-8030-4575-8bcb-7d7e356eab22" RegularExpression="Poke">
+        <Actions>
+          <Action OrderNumber="1" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}/" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: { &quot;command&quot;: &quot;/assist &lt;triangle&gt;&quot; } }" SoundRouting="None" TTSRouting="None" ActionType="GenericJson">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}/" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: { &quot;command&quot;: &quot;/pcraft run NumPad0&quot; } }" SoundRouting="None" TTSRouting="None" ActionType="GenericJson" ExecutionDelayExpression="300">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
     </Triggers>
   </ExportedFolder>
