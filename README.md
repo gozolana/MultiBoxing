@@ -1,5 +1,7 @@
 # MultiBoxing
 
+<https://raw.githubusercontent.com/gozolana/MultiBoxing/main/MultiBoxing.xml>
+
 ## Main
 
 ### ACT and plugins
